@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Catalog Service App
+Simple catalog service using Ruby on Rails. 
 
-Things you may want to cover:
+## Table of contents
+* [Setup](#setup)
+* [GeneralInfo](#general-info)
+* [Technology](#technology)
+* [Developer](#developer)
 
-* Ruby version
+## General Info
+This project example of simple catalog app using Rails. In this project also include impelementation unit testing using Rspec, Faker and FactoryBot
 
-* System dependencies
+## Setup
+To run this project, follow this steps 
+```
+$ Clone this repository
 
-* Configuration
+$ cd /your-app
 
-* Database creation
+$ bundle install
 
-* Database initialization
+$ rails db:setup
 
-* How to run the test suite
+$ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+$ rails s 
+```
 
-* Deployment instructions
+## Technology
+* Ruby
+* Rails
+* PostgreSQL Database
+* Rspec
+* Faker
+* FactoryBot
 
-* ...
+## Developer
+Created by Reza Nur Rochmat.

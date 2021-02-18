@@ -8,10 +8,11 @@ RSpec.describe 'Customer API Request', :type => :request do
             it 'should return 200 OK when get all customers' do
                 customer
 
-                get "/module/v1/customers/index"
+                get "/module/v1/customers"
 
                 expect(response).to have_http_status(200)
-                expect(message).to eq("Customer retrieved successfully")
+                expect(response.body).to include("data")
+                expect(response.body).to include("message")
             end
         end
     end
@@ -24,6 +25,8 @@ RSpec.describe 'Customer API Request', :type => :request do
                 get "/module/v1/customers/#{customer.id}"
 
                 expect(response).to have_http_status(200)
+                expect(response.body).to include("data")
+                expect(response.body).to include("message")
             end
         end
     end

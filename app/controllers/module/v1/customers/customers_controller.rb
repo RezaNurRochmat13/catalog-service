@@ -8,4 +8,13 @@ class Module::V1::Customers::CustomersController < ApplicationController
             :data => customers
         }
     end
+
+    def detailCustomer
+        customer = Customer.find(params[:id])
+
+        render json: {
+            :message => 'Customer retrieved!',
+            :data => customer
+        }
+    end
 end

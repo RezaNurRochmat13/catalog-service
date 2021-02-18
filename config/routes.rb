@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   namespace :module do
     namespace :v1 do
       namespace :customers do
-        get 'index', to: 'customers#allCustomers'
+        get '/', to: 'customers#allCustomers'
+        get '/:id', to: 'customers#detailCustomer'
       end
     end
   end
